@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarDefault from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import Map from "./components/Map";
 import Tournaments from "./components/Tournaments";
 import SignUpPage from "./components/Sign-up";
 import SignInPage from "./components/Sign-in";
@@ -25,7 +24,6 @@ function App() {
           }
         >
           <Route index element={<Home />} />
-          <Route path="map" element={<Map />} />
           <Route path="tournaments" element={<Tournaments />} />
           <Route path="forum" element={<Forum />} />
           <Route path="sign-up" element={<SignUpPage />} />
