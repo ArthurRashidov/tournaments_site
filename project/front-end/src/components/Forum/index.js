@@ -19,22 +19,21 @@ function Body() {
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="relative flex flex-grow flex-col justify-center h-full items-center">
-        <div className="absolute flex  w-full h-full flex-col items-center opacity-50"></div>
         <div className="absolute flex items-end h-full w-11/12 bg-gray-900 rounded-sm"></div>
         <div className="absolute flex items-end h-full w-11/12 border border-white rounded-sm">
           <div className="flex flex-col items-end gap-2 justify-center mx-2 w-screen h-full">
-            <div className="flex flex-col w-full h-full overflow-y-auto">
+            <div className="-inline-flex flex-col w-full h-full overflow-y-auto">
               {messages.map((message, index) => {
                 return (
-                  <div className="flex items-center gap-2 w-full h-16 ps-2">
+                  <div className="flex items-center gap-2 w-full h-16 ps-2" key={index}>
                     <div
                       className={`flex justify-center items-center w-10 h-10 rounded-full ${
-                        message.color
+                        messages[messages.length - 1 - index].color
                       }`}
                     >
-                        {message.user[0]}
+                        {messages[messages.length - 1 - index].user[0]}
                     </div>
-                    <p>{message.message}</p>
+                    <p>{messages[messages.length - 1 - index].message}</p>
                   </div>
                 );
               })}

@@ -51,11 +51,11 @@ export default function Picker(props) {
               head_row: "flex font-medium text-gray-900",
               head_cell: "m-0.5 w-9 font-normal text-sm",
               row: "flex w-full mt-2",
-              cell: "text-gray-600 rounded-md h-9 w-9 text-center text-sm p-0 m-0.5 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-gray-900/20 [&:has([aria-selected].day-outside)]:text-white [&:has([aria-selected])]:bg-gray-900/50 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+              cell: "text-gray-600 rounded-xl h-9 w-9 text-center text-sm p-0 m-0.5 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-gray-900/20 [&:has([aria-selected].day-outside)]:text-white [&:has([aria-selected])]:bg-gray-900/50 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
               day: "h-9 w-9 p-0 font-normal",
               day_range_end: "day-range-end",
               day_selected:
-                "rounded-md !from-gray-400 to-gray-900 text-white !hover:bg-gray-900 hover:text-white focus:bg-gray-900 focus:text-white", // по можливості змінити класс імпортент на щось інше
+                "rounded-xl !bg-gray-800 !text-white !opacity-100", // по можливості змінити класс імпортент на щось інше
               day_outside:
                 "day-outside text-gray-500 opacity-50 aria-selected:bg-gray-500 aria-selected:text-gray-900 aria-selected:bg-opacity-10",
               day_disabled: "text-gray-500 opacity-50",
@@ -65,7 +65,7 @@ export default function Picker(props) {
               highlighted: highlightedDates,
             }}
             modifiersClassNames={{
-              highlighted: 'bg-gradient-to-bl from-cyan-100 to-cyan-600 rounded-md  hover:from-cyan-300 hover:to-cyan-600 text-white',
+              highlighted: 'bg-cyan-700 rounded-xl hover:bg-cyan-600 text-white',
             }}
             components={{
               IconLeft: ({ ...props }) => (
